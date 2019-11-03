@@ -79,7 +79,7 @@ def calculate_bounds(lat_min, lat_max, lon_min, lon_max, zoom):
 
     return bounds
 
-https://github.com/irzu/osmtilecalc
+
 def get_lat_lon_range(lat, lon, radius):
     equator_len = 111
     current_latitude_km_length = math.cos(lat * math.pi / 180) * equator_len
