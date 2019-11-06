@@ -10,7 +10,6 @@ of the rectangle.
 Returns a list of urls pointing to calculated tiles and number of required tiles.
 """
 import argparse
-import pprint
 import sys
 from tile_calculator.calculators import get_urls_for_location
 from tile_calculator.validators import valid_latitude, valid_longitude, valid_zoomlevel
@@ -57,8 +56,10 @@ def main():
     )
     if args.total_only:
         print("Total tiles:", len(tiles))
-    else:
-        pprint.pprint(tiles)
+        sys.exit()
+
+    for tile in tiles:
+        print(tile)
 
 
 if __name__ == "__main__":
