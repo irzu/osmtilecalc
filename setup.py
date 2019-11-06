@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Setup script for osmtilecalc.
 https://github.com/irzu/osmtilecalc

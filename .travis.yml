@@ -7,21 +7,24 @@ matrix:
   include:
   - os: linux
     sudo: false
-    python: '3.5'
-    script: tox -e py35
-  - os: linux
-    sudo: false
     python: '3.6'
     script: tox -e py36
   - os: linux
     dist: xenial
-    python: '3.7'
     sudo: true
+    python: '3.7'
     script: tox -e py37
+  - os: linux
+    dist: bionic
+    sudo: false
+    python: '3.8'
+    script: tox -e py38
   - os: osx
     language: objective-c
     script: tox -e py36
-
+  - os: windows
+    python: '3.7'
+    script: tox -e py36
 install:
   - pip install tox
 
