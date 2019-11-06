@@ -1,4 +1,4 @@
-from main import parse_args
+from tile_calculator.main import parse_args
 
 
 def test_main():
