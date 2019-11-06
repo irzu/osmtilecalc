@@ -33,7 +33,9 @@ optional arguments:
 
   `-m, --miles` Change radius unit to US mile
 
-### Example
+### Examples
+
+You can use the `osm-tile-calc` command to calculate your tiles:
 
 ```shell
 $ osm-tile-calc 54.5189 18.5305 5 12
@@ -43,4 +45,13 @@ https://a.tile.openstreetmap.org/12/2258/1304.png
 https://c.tile.openstreetmap.org/12/2258/1305.png
 https://c.tile.openstreetmap.org/12/2259/1304.png
 https://c.tile.openstreetmap.org/12/2259/1305.png
+```
+
+Or you can use the `get_urls_for_location` function to do it in your
+code:
+
+```pycon
+>>> from tile_calculator import get_urls_for_location
+>>> get_urls_for_location([54.5189, 18.5305], 5, 11)
+['https://b.tile.openstreetmap.org/11/1128/652.png', 'https://b.tile.openstreetmap.org/11/1129/652.png']
 ```
