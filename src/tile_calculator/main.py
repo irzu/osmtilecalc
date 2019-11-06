@@ -20,9 +20,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description=__doc__)
 
     parser.add_argument(
-        "latitude", 
-        type=valid_latitude, 
-        help="Latitude of location in decimal format",
+        "latitude", type=valid_latitude, help="Latitude of location in decimal format",
     )
 
     parser.add_argument(
@@ -31,28 +29,21 @@ def parse_args(args):
         help="Longitude of location in decimal format",
     )
 
+    parser.add_argument("radius", type=int, help="Radius from location in kilometers")
+
     parser.add_argument(
-        "radius", 
-        type=int, 
-        help="Radius from location in kilometers"
+        "zoom_level", type=valid_zoomlevel, help="Map zoom level (0-21)"
     )
 
     parser.add_argument(
-        "zoom_level", 
-        type=valid_zoomlevel, 
-        help="Map zoom level (0-21)"
-    )
-
-    parser.add_argument(
-        "-t", "--total-only",
+        "-t",
+        "--total-only",
         action="store_true",
         help="Only show total number of tiles",
     )
 
     parser.add_argument(
-        "-m", "--miles", 
-        action="store_true", 
-        help="Change radius unit to US mile"
+        "-m", "--miles", action="store_true", help="Change radius unit to US mile"
     )
 
     return parser.parse_args(args)
