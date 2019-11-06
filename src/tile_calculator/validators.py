@@ -3,7 +3,7 @@ import argparse
 
 def valid_latitude(arg):
     """Validates latitude input"""
-    value = int(arg)
+    value = float(arg)
     if value > 90 or value < -90:
         msg = "%r is not a valid latitude" % arg
         raise argparse.ArgumentTypeError(msg)
@@ -12,7 +12,7 @@ def valid_latitude(arg):
 
 def valid_longitude(arg):
     """Validates longitude input"""
-    value = int(arg)
+    value = float(arg)
     if value > 180 or value < -180:
         msg = "%r is not a valid longitude" % arg
         raise argparse.ArgumentTypeError(msg)
