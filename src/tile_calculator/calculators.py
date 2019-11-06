@@ -2,38 +2,39 @@ import math
 import random
 
 
+def _lon_to_x(lon, zoom_level):
+    """
+    Converts longitude to x-axis points.
+    """
+    return math.floor((lon + 180) / 360 * math.pow(2, zoom_level))
+
+
+def _lat_to_y(lat, zoom_level):
+    """
+    Converts latitude to y-axis points.
+    """
+    return math.floor(
+        (
+            1
+            - math.log(
+                math.tan(lat * math.pi / 180) + 1 / math.cos(lat * math.pi / 180)
+            )
+            / math.pi
+        )
+        / 2
+        * math.pow(2, zoom_level)
+    )
+
+
 def coordinates_to_tile_points(bounding_box, zoom_level):
     """
     Converts given lat/lon bounds to tile points for given zoom level.
     """
-
-    def lon_to_x(lon):
-        """
-        Converts longitude to x-axis points.
-        """
-        return math.floor((lon + 180) / 360 * math.pow(2, zoom_level))
-
-    def lat_to_y(lat):
-        """
-        Converts latitude to y-axis points.
-        """
-        return math.floor(
-            (
-                1
-                - math.log(
-                    math.tan(lat * math.pi / 180) + 1 / math.cos(lat * math.pi / 180)
-                )
-                / math.pi
-            )
-            / 2
-            * math.pow(2, zoom_level)
-        )
-
     return {
-        "tx_min": lon_to_x(bounding_box["lon_min"]),
-        "tx_max": lon_to_x(bounding_box["lon_max"]),
-        "ty_min": lat_to_y(bounding_box["lat_max"]),
-        "ty_max": lat_to_y(bounding_box["lat_min"]),
+        "tx_min": _lon_to_x(bounding_box["lon_min"], zoom_level),
+        "tx_max": _lon_to_x(bounding_box["lon_max"], zoom_level),
+        "ty_min": _lat_to_y(bounding_box["lat_max"], zoom_level),
+        "ty_max": _lat_to_y(bounding_box["lat_min"], zoom_level),
     }
 
 
