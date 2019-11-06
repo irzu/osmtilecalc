@@ -22,9 +22,7 @@ matrix:
   - os: osx
     language: objective-c
     script: tox -e py36
-  - os: windows
-    python: '3.7'
-    script: tox -e py36
+
 install:
   - pip install tox
 
