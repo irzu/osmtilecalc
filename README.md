@@ -14,18 +14,18 @@ Returns a list of urls pointing to calculated tiles.
 
 positional arguments:
 
-  latitude          Latitude of location in decimal format
+  `latitude`  Latitude of location in decimal format
   
-  longitude         Longitude of location in decimal format
+  `longitude` Longitude of location in decimal format
   
-  radius            Radius from location in kilometers
+  `radius` Radius from location in kilometers
   
-  zoom_level        Map zoom level (0-21)
+  `zoom_level` Map zoom level (0-21)
 
 optional arguments:
   
-  -h, --help        show this help message and exit
+  `-h, --help` Show this help message and exit
   
-  -t, --total-only  Only show total number of tiles
+  `-t, --total-only` Only show total number of tiles
   
-  -m, --miles       Change radius unit to US mile
+  `-m, --miles` Change radius unit to US mile
