@@ -56,10 +56,9 @@ def main():
     )
     if args.total_only:
         print("Total tiles:", len(tiles))
-        sys.exit()
-
-    for tile in tiles:
-        print(tile)
+    else:
+        for tile in tiles:
+            print(tile)
 
 
 if __name__ == "__main__":
