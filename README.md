@@ -1,4 +1,4 @@
-# osmtilecalc
+# osmtilecalc – Open Street Map Tile Calculator
 Calculates Open Street Map tile coordinates required to map the given area
 at certain zoom level.
 
