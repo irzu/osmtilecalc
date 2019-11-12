@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="osmtilecalc",
-    version="0.1.1",
+    version="1.0.0",
     description="Calculates Open Street Map tile coordinates.",
     long_description=open(
         os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.md")

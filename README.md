@@ -11,6 +11,13 @@ of the rectangle.
 
 Returns a list of urls pointing to calculated tiles.
 
+## Installation
+
+This package is available on PyPI
+
+`pip install osmtilecalc`
+
+
 ## Usage
 
 `osmtilecalc latitude longitude radius zoom_level [-h] [-t] [-m]`
