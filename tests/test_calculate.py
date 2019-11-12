@@ -1,5 +1,5 @@
 import pytest
-from tile_calculator.calculators import (
+from osmtilecalc.calculators import (
     tile_to_url,
     get_bounding_box,
     get_tile_coords,

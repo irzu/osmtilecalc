@@ -1,5 +1,5 @@
 import sys
-from tile_calculator.main import main, parse_args
+from osmtilecalc.main import main, parse_args
 
 
 def test_parse_args():

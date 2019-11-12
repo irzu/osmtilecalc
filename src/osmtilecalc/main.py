@@ -11,8 +11,8 @@ Returns a list of urls pointing to calculated tiles and number of required tiles
 """
 import argparse
 import sys
-from tile_calculator.calculators import get_urls_for_location
-from tile_calculator.validators import valid_latitude, valid_longitude, valid_zoomlevel
+from osmtilecalc.calculators import get_urls_for_location
+from osmtilecalc.validators import valid_latitude, valid_longitude, valid_zoomlevel
 
 
 def parse_args(args):

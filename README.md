@@ -13,7 +13,7 @@ Returns a list of urls pointing to calculated tiles.
 
 ## Usage
 
-`osm-tile-calc latitude longitude radius zoom_level [-h] [-t] [-m]`
+`osmtilecalc latitude longitude radius zoom_level [-h] [-t] [-m]`
 
 positional arguments:
 
@@ -35,7 +35,7 @@ optional arguments:
 
 ### Examples
 
-You can use the `osm-tile-calc` command to calculate your tiles:
+You can use the `osmtilecalc` command to calculate your tiles:
 
 ```shell
 $ osm-tile-calc 54.5189 18.5305 5 12
@@ -51,7 +51,7 @@ Or you can use the `get_urls_for_location` function to do it in your
 code:
 
 ```pycon
->>> from tile_calculator import get_urls_for_location
+>>> from osmtilecalc import get_urls_for_location
 >>> get_urls_for_location([54.5189, 18.5305], 5, 11)
 ['https://b.tile.openstreetmap.org/11/1128/652.png', 'https://b.tile.openstreetmap.org/11/1129/652.png']
 ```

@@ -22,5 +22,5 @@ setup(
     package_dir={"": "src"},
     install_requires=["setuptools"],
     setup_requires=["pytest-runner"],
-    entry_points={"console_scripts": ["osm-tile-calc = tile_calculator.main:main"]},
+    entry_points={"console_scripts": ["osmtilecalc = osmtilecalc.main:main"]},
 )

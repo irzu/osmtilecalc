@@ -1,5 +1,5 @@
 import pytest
-from tile_calculator.validators import valid_latitude, valid_longitude, valid_zoomlevel
+from osmtilecalc.validators import valid_latitude, valid_longitude, valid_zoomlevel
 
 
 def test_valid_latitude():
