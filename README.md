@@ -45,7 +45,7 @@ optional arguments:
 You can use the `osmtilecalc` command to calculate your tiles:
 
 ```shell
-$ osm-tile-calc 54.5189 18.5305 5 12
+$ osmtilecalc 54.5189 18.5305 5 12
 https://c.tile.openstreetmap.org/12/2257/1304.png
 https://b.tile.openstreetmap.org/12/2257/1305.png
 https://a.tile.openstreetmap.org/12/2258/1304.png
